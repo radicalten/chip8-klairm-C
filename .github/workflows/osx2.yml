@@ -9,14 +9,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-    - name: Install Brew
-      run: |
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - name: Install SDL2
       run: |
-        brew install SDL2
-        brew install SDL2_image
-        brew install SDL2_ttf
+        mkdir build
+        cd build 
+        CC=/where/i/cloned/SDL/build-scripts/clang-fat.sh ../configure
+        make
     - name: Compile
       run: |
         make -f Makefile.osx
