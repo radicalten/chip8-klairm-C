@@ -4,7 +4,7 @@ CFLAGS := -Wall -O2
 LDFLAGS := -lSDL2
 
 # Define the source files and the target executable
-SRCS := src/chip8.c src/chip8.h
+SRCS := src/chip8.c
 OBJS := $(SRCS:.c=.o)
 TARGET := chip8
 
