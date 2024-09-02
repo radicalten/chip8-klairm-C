@@ -1,7 +1,7 @@
 CC := gcc
 SRCS := src/*.c
 CFLAGS := -g -Wall -O2 -std=c99
-LFLAGS := `sdl2-config --cflags --libs` 
+LDFLAGS := `sdl2-config --cflags --libs` 
 
 all:
 	$(CC) $(SRC) $(CFLAGS) $(LFLAGS) -o ./bin/chip8
