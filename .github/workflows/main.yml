@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Compile
       run: |
-        make Makefile -j$(nproc)
+        make Makefile.wii -j$(nproc)
     - name: Upload
       uses: actions/upload-artifact@v4
       with:
