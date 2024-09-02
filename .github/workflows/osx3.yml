@@ -12,8 +12,10 @@ jobs:
     - name: Install SDL2
       run: |
         git clone --branch SDL2 --depth 1 https://github.com/libsdl-org/SDL.git
-        cd SDL/cmake
-        cmake sdlplatform.cmake
+        mkdir build
+        cd build
+        cmake sdl/cmake
+        make
     - name: Compile
       run: |
         make -f Makefile.osx
