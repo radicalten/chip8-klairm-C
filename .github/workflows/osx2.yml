@@ -14,9 +14,7 @@ jobs:
         mkdir SDL
         cd SDL
         git clone --branch SDL2 --depth 1 https://github.com/libsdl-org/SDL.git
-        mkdir build
-        cd build 
-        CC=/SDL/build-scripts/clang-fat.sh ../configure
+        CC=SDL/build-scripts/clang-fat.sh
         make
     - name: Compile
       run: |
