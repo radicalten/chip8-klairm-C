@@ -1,0 +1,27 @@
+name: OSX3
+on:
+  push:
+    branches:
+    - master
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Install SDL2
+      run: |
+        mkdir SDL
+        cd SDL
+        git clone --branch SDL2 --depth 1 https://github.com/libsdl-org/SDL.git
+        cd cmake
+        cmake sdlplatform.cmake MacOS
+    - name: Compile
+      run: |
+        make -f Makefile.osx
+    - name: Upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: Artifact
+        path: |
+          ./
