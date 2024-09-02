@@ -3,15 +3,15 @@ TARGET  := $(notdir $(CURDIR))
 BUILD   := build
 SOURCE  := $(wildcard src/*.c)
 OBJECT  := $(notdir $(SOURCE:.c=.o))
-INCLUDE := 
+INCLUDE := $(wildcard src/*.h)
 MACHDEP := -DPLATFORM_MACOS
 
 CFLAGS  := -g -Wall -O3 $(MACHDEP) $(INCLUDE)
 LDFLAGS :=
 
-all: $(BINARY)
+all: $(TARGET)
 
-$(BINARY): $(OBJECTS)
+$(TARGET): $(OBJECTS)
 	$(CC) -o $@ $^
 
 %.o:%.c
