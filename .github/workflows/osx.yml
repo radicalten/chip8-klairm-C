@@ -14,7 +14,9 @@ jobs:
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - name: Install SDL2
       run: |
-        brew install libsdl2-dev
+        brew install SDL2
+        brew install SDL2_image
+        brew install SDL2_ttf
     - name: Compile
       run: |
         make -f Makefile all -j$(nproc)
