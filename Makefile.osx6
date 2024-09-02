@@ -1,6 +1,6 @@
 CC := clang
 TARGET  := $(notdir $(CURDIR))
-BUILD   := 
+BUILD   := build
 SOURCE  := $(wildcard src/*.c)
 OBJECT  := $(notdir $(SOURCE:.c=.o))
 INCLUDE := 
