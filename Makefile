@@ -1,7 +1,7 @@
 OBJS = src/chip8.c
 HEADERS = src/chip8.h
 CC = gcc
-C_FLAGS = -w -pedantic
+C_FLAGS = -w -pedantic -arch arm64
 L_FLAGS = -lSDL2
 OBJ_NAME = chip8
 
