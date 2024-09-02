@@ -2,7 +2,7 @@ CC      := clang
 TARGET  := $(notdir $(CURDIR))
 BUILD   := build
 SOURCE  := $(wildcard src/*.c)
-OBJECT  := $(notdir $(SOURCE:.c=.o))
+OBJECT  := $(patsubst %.c,%.o,$(SOURCE))
 INCLUDE := -I$(wildcard src/*.h)
 MACHDEP := -DPLATFORM_MACOS
 
