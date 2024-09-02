@@ -5,6 +5,6 @@ C_FLAGS := -w -pedantic -std=c99 -arch arm64
 L_FLAGS := -lSDL2 -arch arm64
 OBJ_NAME := chip8
 
-all: $(OBJS)
-	$(CC) $(OBJS) $(HEADERS) $(C_FLAGS) $(L_FLAGS) -o $(OBJ_NAME) 
+all: $(OBJS) -o
+	$(CC) $(OBJS) $(HEADERS) $(C_FLAGS) $(L_FLAGS) $(OBJ_NAME) 
 
