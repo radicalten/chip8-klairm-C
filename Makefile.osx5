@@ -26,3 +26,10 @@ clean:
 # $@ is output file name
 # $^ is all the inputs
 # $(outputs) all the outputs
+
+#Variables
+#CC = C compiler
+#CXX = C++ Compiler
+#CFLAGS = C compiler flags
+#CXXFLAGS = C++ compiler flags
+#LDFlags = Linker Flags Specifies library paths and libraries to link against.
