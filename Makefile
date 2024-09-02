@@ -1,10 +1,8 @@
-OBJS := src/chip8.c
-HEADERS := src/chip8.h
 CC := clang
-C_FLAGS := -w -pedantic -std=c99 -arch arm64
-L_FLAGS := -lSDL2 -arch arm64
-OBJ_NAME := chip8
+CFLAGS := -Wall -03 -std=c99 -arch arm64
+LDFLAGS := -lSDL2 -arch arm64
+SRCS := src
+OBJS := $(SRCS:.c=.o)
+TARGET := chip8
 
-all: $(OBJS) -o
-	$(CC) $(OBJS) $(HEADERS) $(C_FLAGS) $(L_FLAGS) $(OBJ_NAME) 
-
+all: $(TARGET)
