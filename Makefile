@@ -4,4 +4,4 @@ CFLAGS := -g -Wall -O2 -std=c99
 LDFLAGS := `sdl2-config --cflags --libs` 
 
 all:
-	$(CC) $(SRC) $(CFLAGS) $(LDFLAGS) -o ./bin/chip8
+	$(CC) $(SRC) $(CFLAGS) $(LDFLAGS) -o ./chip8
