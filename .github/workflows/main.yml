@@ -10,6 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Install SDL2
+      run: |
         sudo apt-get install libsdl2-dev
     - name: Compile
       run: |
