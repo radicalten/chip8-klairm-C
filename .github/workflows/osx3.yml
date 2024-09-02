@@ -13,7 +13,7 @@ jobs:
       run: |
         git clone --branch SDL2 --depth 1 https://github.com/libsdl-org/SDL.git
         cd SDL/cmake
-        cmake sdlplatform.cmake MacOS
+        cmake sdlplatform.cmake
     - name: Compile
       run: |
         make -f Makefile.osx
