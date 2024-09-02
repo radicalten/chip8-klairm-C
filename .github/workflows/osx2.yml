@@ -15,7 +15,6 @@ jobs:
         cd SDL
         git clone --branch SDL2 --depth 1 https://github.com/libsdl-org/SDL.git
         CC=SDL/build-scripts/clang-fat.sh
-        make
     - name: Compile
       run: |
         make -f Makefile.osx
