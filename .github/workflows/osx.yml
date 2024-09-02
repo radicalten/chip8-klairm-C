@@ -1,4 +1,4 @@
-name: Chip-8
+name: OSX
 on:
   push:
     branches:
@@ -9,6 +9,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Install Brew
+      run: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
     - name: Install SDL2
       run: |
         brew install libsdl2-dev
