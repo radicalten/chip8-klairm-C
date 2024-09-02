@@ -1,31 +1,7 @@
-# Define the compiler and flags
-CC := clang
-CFLAGS := -Wall -O2
-LDFLAGS := -lSDL2
+CC := gcc
+SRCS := src/*.c
+CFLAGS := -g -Wall -O2 -std=c99
+LFLAGS := `sdl2-config --cflags --libs` 
 
-# Define the source files and the target executable
-SRCS := src/chip8.c
-OBJS := $(SRCS:.c=.o)
-TARGET := chip8
-
-# Default target to build
-all: $(TARGET)
-
-# Rule to link the object files into the executable
-$(TARGET): $(OBJS)
-	$(CC) $(LDFLAGS) -o $@ $(OBJS)
-
-# Rule to compile the source files into object files
-%.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
-
-# Rule to clean up the build artifacts
-clean:
-	rm -f $(OBJS) $(TARGET)
-
-# Rule to remove all files created by Makefile
-distclean: clean
-	rm -f *~
-
-# Phony targets
-.PHONY: all clean distclean
+all:
+	$(CC) $(SRC) $(CFLAGS) $(LFLAGS) -o ./bin/chip8
