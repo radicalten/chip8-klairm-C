@@ -9,6 +9,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Install SDL2
+        sudo apt-get install libsdl2-dev
     - name: Compile
       run: |
         make -f Makefile all -j$(nproc)
