@@ -1,8 +1,8 @@
 OBJS := src/chip8.c
 HEADERS := src/chip8.h
 CC := gcc
-C_FLAGS := -w -pedantic -arch arm64
-L_FLAGS := -lSDL2 -arch arm64
+C_FLAGS := -w -pedantic -march arm64
+L_FLAGS := -lSDL2 -march arm64
 OBJ_NAME := chip8
 
 all: $(OBJS)
