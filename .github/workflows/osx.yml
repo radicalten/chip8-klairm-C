@@ -19,7 +19,7 @@ jobs:
         brew install SDL2_ttf
     - name: Compile
       run: |
-        make -f Makefile all -j$(nproc)
+        make -f Makefile.osx
     - name: Upload
       uses: actions/upload-artifact@v4
       with:
