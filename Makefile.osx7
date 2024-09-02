@@ -1,0 +1,21 @@
+CC      := clang
+TARGET  := $(notdir $(CURDIR))
+BUILD   := build
+SOURCE  := $(wildcard src/*.c)
+OBJECT  := $(notdir $(SOURCE:.c=.o))
+INCLUDE := -I$(wildcard src/*.h)
+MACHDEP := -DPLATFORM_MACOS
+
+CFLAGS  := -g -Wall -O3 $(MACHDEP) $(INCLUDE)
+LDFLAGS :=
+
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	$(CC) -o $@ $^
+
+%.o:%.c
+	$(CC) $(CFLAGS) -c -o $@ $^
+
+clean:
+	rm -rf $(BINARY) $(OBJECTS)
