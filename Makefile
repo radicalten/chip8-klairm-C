@@ -1,6 +1,6 @@
 # Define the compiler and flags
 CC := clang
-CFLAGS := -Wall -O3 -std=c99 -arch arm64
+CFLAGS := -Wall -O2
 LDFLAGS := -lSDL2
 
 # Define the source files and the target executable
