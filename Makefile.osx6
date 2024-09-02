@@ -1,0 +1,14 @@
+CC := Clang
+SOURCES := src
+
+
+all: $(BINARY)
+
+$(BINARY): $(OBJECTS)
+	$(CC) -o $@ $^
+
+%.o:%.c
+	$(CC) $(CFLAGS) -c -o $@ $^
+
+clean:
+	rm -rf $(BINARY) $(OBJECTS)
