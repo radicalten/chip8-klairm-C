@@ -1,7 +1,7 @@
 # Define the compiler and flags
 CC := clang
 CFLAGS := -Wall -O3 -std=c99 -arch arm64
-LDFLAGS := -lSDL2 -arch arm64
+LDFLAGS := -lSDL2
 
 # Define the source files and the target executable
 SRCS := src/chip8.c src/chip8.h
