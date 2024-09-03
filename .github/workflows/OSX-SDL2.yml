@@ -22,7 +22,6 @@ jobs:
         make -f Makefile.sdl2min
     - name: Create tarball
       run: |
-          cd src
           tar -cvf myapp.tgz myapp
     - name: Upload
       uses: actions/upload-artifact@v4
