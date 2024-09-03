@@ -1,7 +1,7 @@
 OBJS := src/chip8.c
 CC := clang
 C_FLAGS := -Wall -Wextra -O2
-L_FLAGS := -lSDL2
+L_FLAGS := -lSDL2 -rpath /Library/Frameworks
 OBJ_NAME := chip8
 
 all: $(OBJS)
