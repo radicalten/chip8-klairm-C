@@ -1,7 +1,7 @@
 OBJS := src/chip8.c
 CC := clang
 C_FLAGS := -Wall -Wextra -O2
-L_FLAGS := -I/usr/local/include/SDL2 -L/usr/local/lib -lSDL2
+L_FLAGS := -I/opt/homebrew/include/SDL2 -L/opt/homebrew/lib -lSDL2
 OBJ_NAME := chip8
 
 all: $(OBJS)
