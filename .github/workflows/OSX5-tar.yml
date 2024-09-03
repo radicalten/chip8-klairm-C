@@ -19,7 +19,7 @@ jobs:
         sudo make install
     - name: Compile
       run: |
-        make -f Makefile
+        make -f Makefile.osx
     - name: Create tarball
       run: |
           tar -cvf chip8.tgz chip8
